@@ -1,0 +1,10 @@
+---
+
+- name: Install sudo
+  yum: name=sudo state=installed
+
+- include: granted_users.yml
+  when: server_access_granted_users is defined
+
+- include: granted_keys.yml
+  when: server_access_granted_keys is defined

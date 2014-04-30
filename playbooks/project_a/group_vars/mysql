@@ -1,0 +1,25 @@
+---
+
+server_access_revoked_users: []
+
+server_access_revoked_keys:
+  alpha: "key2"
+
+server_access_granted_users:
+  alpha:
+    root: false
+  bravo:
+    root: false
+  beta:
+    root: false
+  zulu:
+    root: true
+  yankee:
+    root: true
+
+server_access_granted_keys:
+  alpha: "key"
+  bravo: ""
+  beta: ""
+  zulu: ""
+  yankee: ""
