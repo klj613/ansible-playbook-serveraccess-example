@@ -7,12 +7,12 @@
         state=present
   with_dict: server_access_granted_users
 
-- name: Add sudoers ALL for a user
+- name: Add root access
   template:
     src=sudo.j2
-    dest=/etc/sudoers.d/{{ item.name }}_ALL
+    dest=/etc/sudoers.d/{{ item.key }}_ALL
     owner=root group=root mode=0440
-  when: '"{{ item.value.root }}" == true'
+  when: '"{{ item.value.root }}" == "True"'
   with_dict: server_access_granted_users
 
 - name: Create users .ssh folder

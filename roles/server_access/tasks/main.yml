@@ -4,7 +4,8 @@
   yum: name=sudo state=installed
 
 - include: granted_users.yml
-  when: server_access_granted_users is defined
-
 - include: granted_keys.yml
-  when: server_access_granted_keys is defined
+
+- include: revoked_users.yml
+- include: revoked_keys.yml
+

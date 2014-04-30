@@ -1,13 +1,14 @@
 ---
 
-server_access_revoked_users: []
+#server_access_revoked_users:
 
+# TODO ability to revoke multiple keys per user
 server_access_revoked_keys:
   alpha: "key2"
 
 server_access_granted_users:
   alpha:
-    root: false
+    root: true
   bravo:
     root: false
   beta:
@@ -17,6 +18,7 @@ server_access_granted_users:
   yankee:
     root: true
 
+# TODO ability for users to have multiple keys
 server_access_granted_keys:
   alpha: "key"
   bravo: ""
